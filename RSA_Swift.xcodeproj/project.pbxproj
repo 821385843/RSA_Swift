@@ -18,6 +18,7 @@
 		5D80EEA122056DF6008A0533 /* private_key.p12 in Resources */ = {isa = PBXBuildFile; fileRef = 5D80EE9D22056DF6008A0533 /* private_key.p12 */; };
 		5D80EEA322112871008A0533 /* String+md5.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D80EEA222112871008A0533 /* String+md5.swift */; };
 		5D80EEA5221142F3008A0533 /* test_file_md5.png in Resources */ = {isa = PBXBuildFile; fileRef = 5D80EEA4221142F3008A0533 /* test_file_md5.png */; };
+		5D80EEA722115819008A0533 /* RSA_Swift.podspec in Resources */ = {isa = PBXBuildFile; fileRef = 5D80EEA622115819008A0533 /* RSA_Swift.podspec */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5D80EE9D22056DF6008A0533 /* private_key.p12 */ = {isa = PBXFileReference; lastKnownFileType = file; path = private_key.p12; sourceTree = "<group>"; };
 		5D80EEA222112871008A0533 /* String+md5.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+md5.swift"; sourceTree = "<group>"; };
 		5D80EEA4221142F3008A0533 /* test_file_md5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = test_file_md5.png; sourceTree = "<group>"; };
+		5D80EEA622115819008A0533 /* RSA_Swift.podspec */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = RSA_Swift.podspec; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -50,6 +52,7 @@
 		5D80EE7B22056DAA008A0533 = {
 			isa = PBXGroup;
 			children = (
+				5D80EEA622115819008A0533 /* RSA_Swift.podspec */,
 				5D80EE8622056DAA008A0533 /* RSA_Swift */,
 				5D80EE8522056DAA008A0533 /* Products */,
 			);
@@ -149,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5D80EE9222056DAC008A0533 /* LaunchScreen.storyboard in Resources */,
+				5D80EEA722115819008A0533 /* RSA_Swift.podspec in Resources */,
 				5D80EE8F22056DAC008A0533 /* Assets.xcassets in Resources */,
 				5D80EEA022056DF6008A0533 /* public_key.der in Resources */,
 				5D80EEA122056DF6008A0533 /* private_key.p12 in Resources */,
