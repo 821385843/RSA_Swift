@@ -13,6 +13,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        Thread.sleep(forTimeInterval: 3)
         
         rsaEncryptOrDecryptForString()
         md5String()
