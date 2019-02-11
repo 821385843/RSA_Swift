@@ -32,9 +32,7 @@ public extension String {
     ///
     /// - Returns: 返回文件的 md5 值
     public func md5_File() -> String? {
-        let handle = FileHandle(forReadingAtPath: self)
-        
-        if handle == nil {
+        guard let fileHandle = FileHandle(forReadingAtPath: self) else {
             return nil
         }
         
@@ -45,30 +43,27 @@ public extension String {
         var done = false
         
         while !done {
-            let fileData = handle?.readData(ofLength: 256)
-            
-            fileData?.withUnsafeBytes {(bytes: UnsafePointer<CChar>)->Void in
+            let fileData = fileHandle.readData(ofLength: 256)
+            fileData.withUnsafeBytes {(bytes: UnsafePointer<CChar>) -> () in
                 /// Use `bytes` inside this closure
-                /// ...
-                CC_MD5_Update(ctx, bytes, CC_LONG(fileData!.count))
+                CC_MD5_Update(ctx, bytes, CC_LONG(fileData.count))
             }
             
-            if fileData?.count == 0 {
+            if fileData.count == 0 {
                 done = true
             }
         }
         
-        /// unsigned char digest[CC_MD5_DIGEST_LENGTH];
-        let digestLen = Int(CC_MD5_DIGEST_LENGTH)
-        let digest = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digestLen)
-        CC_MD5_Final(digest, ctx);
+        let digest = Int(CC_MD5_DIGEST_LENGTH)
+        let result = UnsafeMutablePointer<CUnsignedChar>.allocate(capacity: digest)
+        CC_MD5_Final(result, ctx);
         
         var hash = ""
-        for i in 0..<digestLen {
-            hash +=  String(format: "%02x", (digest[i]))
+        for i in 0..<digest {
+            hash +=  String(format: "%02x", (result[i]))
         }
         
-        free(digest)
+        free(result)
         free(ctx)
         
         return hash;

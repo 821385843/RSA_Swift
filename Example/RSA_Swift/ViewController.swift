@@ -51,7 +51,6 @@ class ViewController: UIViewController {
             else {
                 return
         }
-        
         print("\n文件的 MD5 值：\(filePath.md5_File() ?? "")\n")
     }
 }
