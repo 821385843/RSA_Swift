@@ -1,15 +1,19 @@
-# MGJRouter_Swift
-一个高效/灵活的 iOS Swift 版 URL Router，完全实现了蘑菇街 Object-C 版 [MGJRouter](https://github.com/meili/MGJRouter) 的所有功能。虽然 github 上也有一款参照 MGJRouter 仿写的 Swift 版框架，但是却去掉了 MGJRouter 的很多功能，不实用。
+# RSA_Swift
 
-## 为什么要写 MGJRouter_Swift ？
-看了几款不错的 Object-C 版的 Router，比如：[JLRoutes](https://github.com/joeldev/JLRoutes)、[HHRouter](https://github.com/Huohua/HHRouter)、[MGJRouter](https://github.com/meili/MGJRouter)，还是觉得 Object-C 版 MGJRouter 查找 URL 更高效。
+[RSA_Swift](https://github.com/821385843/RSA_Swift) 是一款轻量级的 `Swift` 版本的框架，框架功能包括：`RSA` 加密/解密字符串、`RSA` 加密/解密 `Data`、字符串的 `MD5`、文件的 `MD5` 值的获取。
 
-虽然 Object-C 版 MGJRouter 在 Swift 中也可以使用，但是也存在问题，比如 block 调用这块。所以说基于这个缺点，MGJRouter_Swift就诞生了。
+## Example
+
+To run the example project, clone the repo, and run `pod install` from the Example directory first.
+
+## 为什么要写 RSA_Swift ？
+`github` 上 `Swift` 版本的 `RSA` 加密/解密框架也有，但大部分不维护了，所以就写了这个框架，附带的加上比较常见的功能：字符串的 `MD5`、文件的 `MD5` 值的获取。
+对于文件的 `MD5` 值的获取，是将文件分块读出并且计算md5值的方法，有别于文件一次性读出并且计算md5值的方法。
 
 ## 安装
 
 ```
-pod 'MGJRouter_Swift'
+pod 'RSA_Swift'
 ```
 
 ## 使用姿势
