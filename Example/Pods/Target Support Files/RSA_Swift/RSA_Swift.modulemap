@@ -1,0 +1,6 @@
+framework module RSA_Swift {
+  umbrella header "RSA_Swift-umbrella.h"
+
+  export *
+  module * { export * }
+}
