@@ -66,6 +66,13 @@ print("字符串的MD5：\(str.md5())")
 
 RSA_Swift is available under the MIT license. See the LICENSE file for more info.
 
+## 作者其他框架
+[MGJRouter_Swift](https://github.com/821385843/MGJRouter_Swift)：一个高效/灵活的 `iOS` `Swift` 版 `URL Router`，完全实现了蘑菇街 `Object-C` 版 `MGJRouter` 的所有功能。虽然 `github` 上也有一款参照 `MGJRouter` 仿写的 `Swift` 版框架，但是却去掉了 `MGJRouter` 的很多功能，不实用。
+
+[XWCountDownButton_OC](https://github.com/821385843/XWCountDownButtonDemo)：这是一个 `Object-C` 版本的小框架，可以使用 `pod`，应用于短信验证码倒计时。
+
+[XWCountDownButton](https://github.com/821385843/XWCountDownDemo_Swift)：这是一个 `Swift` 版本的小框架，可以使用 `pod`，应用于短信验证码倒计时。
+
 ## Author
 如果你有什么建议，可以关注我的公众号：`iOS开发者进阶`，直接留言，留言必回。
 
