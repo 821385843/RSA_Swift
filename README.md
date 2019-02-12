@@ -43,11 +43,30 @@ RSA.rsaEncrypt(filePath, encryptString) { (encryptedString) in
 }
 ```
 
+### 获取文件的 MD5 值
+
+```
+/// 文件的 MD5 值
+guard let filePath = Bundle.main.path(forResource: "test_file_md5", ofType: "png")
+        else {
+    return
+}
+print("\n文件的 MD5 值：\(filePath.md5_File() ?? "")\n")
+```
+
+### 字符串的 `MD5`
+
+```
+/// 字符串的 MD5
+let str = "字符串的MD5"
+print("字符串的MD5：\(str.md5())")
+```
+
 ## License
 
 RSA_Swift is available under the MIT license. See the LICENSE file for more info.
 
 ## Author
-如果你有什么建议，可以关注我的公众号：iOS开发者进阶，直接留言，留言必回。
+如果你有什么建议，可以关注我的公众号：`iOS开发者进阶`，直接留言，留言必回。
 
 ![输入图片说明](https://github.com/821385843/MGJRouter_Swift/blob/master/QR.png "在这里输入图片标题")
