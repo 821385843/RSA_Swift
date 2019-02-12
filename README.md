@@ -24,6 +24,8 @@ pod 'RSA_Swift'
 ### 最基本的使用
 
 ```
+/// rsa 加密字符串和解密字符串
+/// 注：rsa 加密 Data 和解密 Data方法使用与“rsa 加密字符串和解密字符串”类似，这里就不写示例代码了
 let filePath = Bundle.main.path(forResource: "public_key", ofType: "der")
         
 let encryptString = "abcdefg"
