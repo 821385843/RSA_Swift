@@ -29,16 +29,16 @@ pod 'RSA_Swift'
 let filePath = Bundle.main.path(forResource: "public_key", ofType: "der")
         
 let encryptString = "abcdefg"
-print("\n要加密的字符串：\(encryptString)\n")
+print("要加密的字符串：\(encryptString)")
         
 /// Encrypt
 RSA.rsaEncrypt(filePath, encryptString) { (encryptedString) in
-    print("\n加密后的字符串：\(encryptedString ?? "")\n")
+    print("加密后的字符串：\(encryptedString ?? "")")
             
     let filePath1 = Bundle.main.path(forResource: "private_key.p12", ofType: nil)
     /// Decrypt
     RSA.rsaDecrypt(filePath1, "ios", encryptedString, { (decryptedString) in
-        print("\n解密后的字符串：\(decryptedString ?? "")\n")
+        print("解密后的字符串：\(decryptedString ?? "")")
     })
 }
 ```
@@ -51,7 +51,7 @@ guard let filePath = Bundle.main.path(forResource: "test_file_md5", ofType: "png
         else {
     return
 }
-print("\n文件的 MD5 值：\(filePath.md5_File() ?? "")\n")
+print("文件的 MD5 值：\(filePath.md5_File() ?? "")")
 ```
 
 
