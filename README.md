@@ -2,13 +2,13 @@
 
 [RSA_Swift](https://github.com/821385843/RSA_Swift) 是一款轻量级的 `Swift` 版本的框架，框架功能包括：`RSA` 加密/解密字符串、`RSA` 加密/解密 `Data`、字符串的 `MD5`、文件的 `MD5` 值的获取。
 
+## 写 `RSA_Swift` 初衷？
+`github` 上 `Swift` 版本的 `RSA` 加密/解密框架也有，但大部分不维护了，所以就写了这个框架，附带的加上比较常见的功能：字符串的 `MD5`、文件的 `MD5` 值的获取。
+对于文件的 `MD5` 值的获取，是将文件分块读出并且计算 `MD5` 值的方法，有别于文件一次性读出并且计算 `MD5` 值的方法。
+
 ## Example
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
-
-## 为什么要写 RSA_Swift ？
-`github` 上 `Swift` 版本的 `RSA` 加密/解密框架也有，但大部分不维护了，所以就写了这个框架，附带的加上比较常见的功能：字符串的 `MD5`、文件的 `MD5` 值的获取。
-对于文件的 `MD5` 值的获取，是将文件分块读出并且计算md5值的方法，有别于文件一次性读出并且计算md5值的方法。
 
 ## Installation
 
