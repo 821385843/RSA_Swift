@@ -19,6 +19,28 @@ it, simply add the following line to your Podfile:
 pod 'RSA_Swift'
 ```
 
+## 使用姿势
+
+### 最基本的使用
+
+```
+let filePath = Bundle.main.path(forResource: "public_key", ofType: "der")
+        
+let encryptString = "abcdefg"
+print("\n要加密的字符串：\(encryptString)\n")
+        
+/// Encrypt
+RSA.rsaEncrypt(filePath, encryptString) { (encryptedString) in
+    print("\n加密后的字符串：\(encryptedString ?? "")\n")
+            
+    let filePath1 = Bundle.main.path(forResource: "private_key.p12", ofType: nil)
+    /// Decrypt
+    RSA.rsaDecrypt(filePath1, "ios", encryptedString, { (decryptedString) in
+        print("\n解密后的字符串：\(decryptedString ?? "")\n")
+    })
+}
+```
+
 ## License
 
 RSA_Swift is available under the MIT license. See the LICENSE file for more info.
