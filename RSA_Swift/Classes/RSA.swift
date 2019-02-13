@@ -22,8 +22,10 @@ public class RSA: NSObject {
     
     /// rsa 加密字符串
     ///
+    /// - Parameters:
+    ///   - publicKeyPath: 公钥路径
     /// - Parameter string: 要加密的字符串
-    /// - Returns: 加密后的 BASE64 编码字符串
+    ///   - completion: 完成回调，可以根据 encryptedString 是否为 nil来判断加密是否成功
     public class func rsaEncrypt(_ publicKeyPath: String?, _ string: String, _ completion: ((_ encryptedString: String?) -> ())?) {
         guard let encryptData = string.data(using: String.Encoding.utf8) else {
                 print("String to be encrypted is nil")
@@ -43,8 +45,10 @@ public class RSA: NSObject {
     
     /// rsa 加密二进制数据
     ///
+    /// - Parameters:
+    ///   - publicKeyPath: 公钥路径
     /// - Parameter data: 要加密的二进制数据
-    /// - Returns: 加密后的二进制数据
+    ///   - completion: 完成回调，可以根据 encryptedData 是否为 nil来判断加密是否成功
     public class func rsaEncrypt(_ publicKeyPath: String?, _ data: Data?, _ completion: ((_ encryptedData: Data?) -> ())?) {
         guard let pkPath = publicKeyPath,
               let pkRef = loadPublicKey(pkPath),
@@ -80,7 +84,7 @@ public class RSA: NSObject {
     ///   - privateKeyPath: 私钥路径
     ///   - password: 私钥密码
     ///   - string: 要解密的 base64 编码字符串
-    /// - Returns: 解密后的字符串
+    ///   - completion: 完成回调，可以根据 encryptedString 是否为 nil来判断加密是否成功
     public class func rsaDecrypt(_ privateKeyPath: String?, _ password: String, _ string: String?, _ completion: ((_ encryptedString: String?) -> ())?) {
         guard let str = string,
             let decryptData = Data(base64Encoded: str) else {
@@ -105,7 +109,7 @@ public class RSA: NSObject {
     ///   - privateKeyPath: 私钥路径
     ///   - password: 私钥密码
     ///   - data: 要解密的二进制数据
-    /// - Returns: 解密后的二进制数据
+    ///   - completion: 完成回调，可以根据 encryptedData 是否为 nil来判断加密是否成功
     public class func rsaDecrypt(_ privateKeyPath: String?, _ password: String, _ data: Data?, _ completion: ((_ encryptedData: Data?) -> ())?) {
         guard let pkPath = privateKeyPath,
             let pkRef = loadPrivateKey(pkPath, password),
